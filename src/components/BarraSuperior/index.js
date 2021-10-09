@@ -15,13 +15,14 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     boxShadow: 'none',
     zIndex: theme.zIndex.drawer + 1,
+    paddingRight: theme.spacing(3),
   },
   logo: {
     height: 26,
   },
   menuIcon: {
     marginRight: theme.spacing(3),
-    marginLeft: theme.spacing(2),
+    marginLeft: theme.spacing(1),
   },
   icons: {
     marginRight: theme.spacing(1),
