@@ -11,7 +11,7 @@ function App() {
       secondary: {
         main: '#3f51b5',
       }
-    }
+    },
   });
 
   return (

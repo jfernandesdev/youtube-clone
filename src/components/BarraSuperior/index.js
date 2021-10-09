@@ -14,6 +14,7 @@ import MoreVert from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
   appBar: {
     boxShadow: 'none',
+    zIndex: theme.zIndex.drawer + 1,
   },
   logo: {
     height: 26,
