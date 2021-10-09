@@ -1,6 +1,8 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Box, Hidden } from '@material-ui/core';
+
 import { BarraSuperior } from './components/BarraSuperior';
 import { MenuLateral } from './components/MenuLateral';
+import { ContentVideoList } from './components/ContentVideoList';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +27,12 @@ function Home(){
   return(
     <div className={classes.root}>
       <BarraSuperior />
-      <MenuLateral />
+      <Box display="flex">
+        <Hidden mdDown>
+          <MenuLateral />
+        </Hidden>
+        <ContentVideoList />
+      </Box>
     </div>
   );
 }
