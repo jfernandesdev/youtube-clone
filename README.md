@@ -30,7 +30,7 @@ Tablet Light | Tablet Dark | Mobile Light | Mobile Dark
 
 ### Dê uma olhada como o projeto ficou! 👀
 
-(Em breve ...)
+https://youtubeclone-jfernandesdev.netlify.app
 
 <br>
 
