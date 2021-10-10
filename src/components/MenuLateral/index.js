@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subheader: {
     color: 'rgb(96, 96, 96)',
-    background: '#FFF',
+    background: theme.palette.dark,
     fontWeight: 'bold',
     paddingTop: theme.spacing(2),
     paddingBottom: 2,

@@ -7,7 +7,8 @@ import { ContentVideoList } from './components/ContentVideoList';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    height: '100vh',
+    height: '100%',
+    backgroundColor: theme.palette.background.dark,
   },
   '@global': {
     '*::-webkit-scrollbar': {
@@ -21,12 +22,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Home(){
+function Home({darkMode, setDarkMode}){
   const classes = useStyles();
-
+  
   return(
     <div className={classes.root}>
-      <BarraSuperior />
+      <BarraSuperior darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Box display="flex">
         <Hidden mdDown>
           <MenuLateral />

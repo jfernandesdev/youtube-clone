@@ -1,15 +1,10 @@
 import { 
-  // makeStyles,
   Box,
   Toolbar,
   Typography,
   Grid,
   Avatar,
 } from '@material-ui/core';
-
-// const useStyles = makeStyles((theme) => ({
-  
-// }))
 
 const arrayVideos = [];
 for(let i=1; i<=100; i++){
