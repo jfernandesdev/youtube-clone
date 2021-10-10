@@ -167,7 +167,7 @@ export function MenuLateral() {
       <div className={classes.drawerContainer}>
         <List>
           {optionMenuPrimary.map((item, index) => (
-            <ListItem button key={ index } className={classes.listItem}>
+            <ListItem button key={ index } className={classes.listItem} selected={index === 0}>
               <ListItemIcon>{ item.icon }</ListItemIcon>
               <ListItemText 
                 classes={{ primary: classes.listItemText }} 
