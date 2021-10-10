@@ -7,7 +7,9 @@ import {
   TextField,
   Box,
   Switch,
-  FormControlLabel
+  FormControlLabel,
+  Grid,
+  Hidden
 } from '@material-ui/core';
 
 import { useTheme, styled } from '@material-ui/core/styles';
@@ -39,10 +41,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center', 
     justifyContent: 'space-between',
+    flex: 1,
     paddingRight: theme.spacing(5),
-  },
-  input1: {
-    width: '40vw',
   },
 }));
 
@@ -97,57 +97,72 @@ export function BarraSuperior({darkMode, setDarkMode}) {
 
   return (
     <AppBar color='inherit' className={classes.appBar}>
-      <Toolbar className={classes.toolbar}>
-        <Box display='flex' alignItems='center'>
-          <IconButton edge='start' className={classes.menuIcon} aria-label='menu'>
-            <Menu />
-          </IconButton>
-
-          <img src={theme.palette.type === 'dark' ? './images/logo-youtube-branco.png' : './images/logo-youtube-preto.png'} alt="Logo do Youtube" className={classes.logo}/>
-        </Box>
-
-        <TextField
-          id="standard-bare"
-          size="small"
-          variant="outlined"
-          placeholder="Pesquisar"
-          InputProps={{
-            classes: {
-              input: classes.input1 
-            },
-            endAdornment: (
-              <IconButton>
-                <SearchOutlined />
+      
+      <Grid container>
+        <Toolbar className={classes.toolbar}>
+          <Grid item  lg={3} md={3} sm={3} xs={12}>
+            <Box display='flex' alignItems='center'>
+              <IconButton edge='start' className={classes.menuIcon} aria-label='menu'>
+                <Menu />
               </IconButton>
-            ),
-          }}
-        />
+              <img src={theme.palette.type === 'dark' ? './images/logo-youtube-branco.png' : './images/logo-youtube-preto.png'} alt="Logo do Youtube" className={classes.logo}/>
+            </Box>
+          </Grid>
+
+          <Grid item  lg={5} md={5} sm={3} xs={12}>
+            <Box display='flex' justifyContent='center'>
+              <TextField
+                id="standard-bare"
+                size="small"
+                fullWidth
+                variant="outlined"
+                placeholder="Pesquisar"
+                InputProps={{
+                  endAdornment: (
+                    <IconButton>
+                      <SearchOutlined />
+                    </IconButton>
+                  ),
+                }}
+              />
+            </Box>
+          </Grid>
        
-        <Box>
-          <FormControlLabel
-            control={<MaterialUISwitch />}
-            value={darkMode}
-            onChange={handleChangeDarkMode} 
-            className={classes.icons}
-          />
+          <Grid item  lg={4} md={4} sm={6} xs={12}>
+            <Box display='flex' justifyContent='right'> 
+              <FormControlLabel
+                control={<MaterialUISwitch />}
+                value={darkMode}
+                onChange={handleChangeDarkMode} 
+                className={classes.icons}
+              />
 
-          <IconButton className={classes.icons}>
-            <VideoCall />
-          </IconButton>
+              <Hidden mdDown>
+                <IconButton className={classes.icons}>
+                  <VideoCall />
+                </IconButton>
+              </Hidden>
 
-          <IconButton className={classes.icons}>
-            <Apps />
-          </IconButton>
+              <IconButton className={classes.icons}>
+                <Apps />
+              </IconButton>
 
-          <IconButton className={classes.icons}>
-            <MoreVert />
-          </IconButton>
-          
-          <Button variant='outlined' color='secondary' startIcon={<AccountCircle />} >
-            Fazer Login
-          </Button>
-        </Box>
-      </Toolbar>
+              <IconButton className={classes.icons}>
+                <MoreVert />
+              </IconButton>
+              
+              <Button 
+                variant='outlined' 
+                color='secondary' 
+                startIcon={<AccountCircle />} 
+                style={{whiteSpace: 'nowrap', minWidth: 'max-content'}}
+                >
+                Fazer Login
+              </Button>
+            </Box>
+          </Grid>
+          </Toolbar>
+        </Grid>
     </AppBar>
   );
 }
