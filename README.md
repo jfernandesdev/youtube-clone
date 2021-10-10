@@ -6,6 +6,7 @@ Projeto Web desenvolvido para fins didáticos. TEMA: 'Youtube clone' ▶📽
 
 - [x] Reprodução da interface inicial do Youtube com Material UI;
 - [x] Menu lateral, barra superior, feed de vídeos recomendados;
+- [x] Switch de modo tema light e dark 
 - [x] Layout responsivo: desktop, tablet e smartphone.
 
 ## Tecnologias utilizadas: 🚀
@@ -16,9 +17,16 @@ Projeto Web desenvolvido para fins didáticos. TEMA: 'Youtube clone' ▶📽
 
 ## Layout 🤩
 
-### Desktop (screenshot):
+### Desktop, Mobile e Tablet (screenshot):
 
-### Mobile e Tablet (screenshot):
+| Home Desktop Light | Home Desktop Dark
+| --- | --- |
+<img src="https://github.com/jfernandesdev/youtube-clone/blob/d0506d926276f621512154e64485294fc0f2f51e/public/layout/layout-1.png"  /> | <img src="https://github.com/jfernandesdev/youtube-clone/blob/d0506d926276f621512154e64485294fc0f2f51e/public/layout/layout-2.png" />
+
+Tablet Light | Tablet Dark | Mobile Light | Mobile Dark
+|--- | --- | --- | --- |
+<img src="https://github.com/jfernandesdev/youtube-clone/blob/d0506d926276f621512154e64485294fc0f2f51e/public/layout/layout-4.png" width='350px' /> | <img src="https://github.com/jfernandesdev/youtube-clone/blob/d0506d926276f621512154e64485294fc0f2f51e/public/layout/layout-4.png" width='350px' /> | <img src="https://github.com/jfernandesdev/youtube-clone/blob/d0506d926276f621512154e64485294fc0f2f51e/public/layout/layout-5.png" width='200px' /> | <img src="https://github.com/jfernandesdev/youtube-clone/blob/d0506d926276f621512154e64485294fc0f2f51e/public/layout/layout-6.png" width='200px'/> 
+
 
 ### Dê uma olhada como o projeto ficou! 👀
 
